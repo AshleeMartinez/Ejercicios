@@ -1,0 +1,18 @@
+package ejercicio5;
+import java.util.Scanner;
+public class mainejercicio5 {
+
+	public static void main(String[] args) {
+Scanner teclado= new Scanner (System.in);
+		
+// Evaluar la Función Y= 5X^4 + 2X^3 + 3X^2 + 7 para el valor de 
+// a) X=1;
+// b) X un número cualquiera.
+
+
+int Y, X=1;
+Y= 5X^4 + 2X^3 + 3X^2 + 7;
+
+System.out.println("Valor de la funcion es: ");
+	}
+}
