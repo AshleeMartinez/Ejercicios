@@ -1,0 +1,27 @@
+package ejercicio2;
+import java.util.Scanner; 
+
+public class mainejercicio2 {
+
+	public static void main(String[] args) {
+     Scanner teclado= new Scanner(System.in);
+     
+     // Determinar el Perímetro de una circunferencia y el área de un círculo
+
+     int r, d;
+     
+     System.out.println("Ingrese diametro: ");
+     d=teclado.nextInt();
+     
+     System.out.println("Ingrese radio: ");
+     r= teclado.nextInt();
+     
+    double perimetro= Math.PI*d;
+    System.out.println("El perimetro de la circuferencia es " + perimetro);
+     
+     
+     double Area= Math.PI*(r*r);
+     System.out.println("El area del circulo es: "+ Area);
+	}
+
+}
