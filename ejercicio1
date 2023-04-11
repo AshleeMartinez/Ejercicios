@@ -1,0 +1,25 @@
+package ejercicio1;
+
+import java.util.Scanner;
+
+public class mainejercicio1 {
+
+	public static void main(String[] args) {
+		//Determinar el área de un rectángulo que tiene por base “B” y por altura “H”, imprima la 
+		// base, la altura y su área.
+		
+		Scanner teclado = new Scanner (System.in);
+
+		int B, H, area, resultado;
+		
+		System.out.println("Ingrese area deseada: ");
+		B=teclado.nextInt();
+		
+		System.out.println("Ingrese altura deseada");
+		H= teclado.nextInt();
+		
+		area= B*H;
+		System.out.println("El resultado es " +area );
+	}
+
+}
