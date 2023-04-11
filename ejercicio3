@@ -1,0 +1,21 @@
+package ejercicio3;
+import java.util.Scanner;
+public class mainejercicio3 {
+
+	public static void main(String[] args) {
+       Scanner teclado= new Scanner(System.in);
+
+// Determine el valor de Y= X*C-2 donde C es una constante con valor C=2.5.
+//  a) Sabiendo que X=2;
+//     b) Considerando a X un valor cualquiera.
+		
+		
+       double y=0;
+	   int x=2;
+	   double c= 2.5;
+       
+	   y= x*c -2;
+	   
+       System.out.println("El resultado de y es: "+ y);
+	}
+}
