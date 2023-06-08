@@ -1,0 +1,17 @@
+import java.util.*;
+public class hexadecimal_a_decimal {
+
+	public static void main(String[] args) {
+		
+	        Scanner teclado = new Scanner(System.in);
+	        
+	        System.out.print("Ingresa un numero hexadecimal: ");
+	        String hexNum = teclado.nextLine();
+
+	        int decNum = Integer.parseInt(hexNum, 16);
+	        
+	        System.out.println("El número decimal equivalente a " + hexNum + " es " + decNum);
+	 
+	       
+	}
+}
