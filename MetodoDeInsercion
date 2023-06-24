@@ -1,0 +1,40 @@
+package Met_Insercion;
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+public class main_Insercion {
+
+	public static void main(String[] args) {
+		Scanner teclado= new Scanner(System.in);
+		
+		int arreglo[], Nelementos, aux, pos;
+		
+		Nelementos= Integer.parseInt(JOptionPane.showInputDialog("Digite los elementos "));
+		
+		arreglo= new int [Nelementos]; //Le asignamos el num de elementos al arreglo
+		
+		for (int i=0; i<Nelementos; i++) {
+			System.out.println((i+1) + "Digite un numero");
+			arreglo[i]= teclado.nextInt();
+		}
+		//Ordenamiento por Insercion
+		for( int i=0; i<Nelementos; i++) {
+			pos=i;
+			aux= arreglo[i];
+			
+			while((pos>0) && (arreglo[pos-1]> aux)) {
+				arreglo[pos]= arreglo[pos-1];
+				pos--;
+			}
+			arreglo[pos]= aux;
+		}
+		//Mostrar el arreglo ordenado en forma creciente
+		System.out.println("Arreglo Ordenado en forma creciente: ");
+		for(int i=0; i<Nelementos; i++) {
+			System.out.println(arreglo[i] + " - ");
+		}
+		System.out.println("Arreglo Ordenado en forma decreciente: ");
+		for(int i=(Nelementos-1); i>=0; i-- ) {
+			System.out.println(arreglo[i] + " - ");
+		}
+	}
+}
