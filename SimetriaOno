@@ -1,0 +1,42 @@
+package main_matrizS;
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+public class SIMETRIAOnO {
+
+	public static void main(String[] args) {
+		Scanner pantalla= new Scanner(System.in);
+		 int matriz[][],nFilas, nColum;  
+		boolean simetrica=true;
+		
+		nFilas= Integer.parseInt(JOptionPane.showInputDialog("Digite las filas ")); 
+		nColum= Integer.parseInt(JOptionPane.showInputDialog("Digite las columnas ")); 
+		// Pa llenar la matriz
+		matriz= new int[nFilas][nColum];
+		System.out.println("Digite una matriz ");
+		for(int i=0; i<nFilas; i++) {
+			for (int j=0; j<nColum; j++) {
+				System.out.println(" Matriz [" +i+"][ "+j+ "]: ");
+				matriz[i][j]=pantalla.nextInt();
+			}
+		}
+		//Comprobar num de filas sea igual a num de Columnas
+		if(nFilas == nColum) {
+			int i,j;
+			i=0; //Inicializamos para usar while los iteradores se hacen afuera
+			while(i<nFilas && simetrica== true) {
+				j=0;
+				while(j<i && simetrica==true) {
+					if(matriz[i][j]!= matriz[j][i]) {
+						simetrica=false;
+					} j++;
+				}i++;
+			} 
+			if(simetrica== true) {
+				JOptionPane.showMessageDialog(null, "La matriz es simetrica ");
+			} else  {
+				JOptionPane.showMessageDialog(null, "La matriz no es simetrica ");
+			}	
+		}
+	}
+}
