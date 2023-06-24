@@ -1,0 +1,17 @@
+package CicloDoWhile;
+import java.util.Scanner;
+public class CicloDo_While {
+
+	public static void main(String[] args) {
+		Scanner pantalla= new Scanner(System.in);
+		
+		int i=1, contador;
+		System.out.println("Digite la cantidad de terminos ");
+		contador= pantalla.nextInt();
+		
+		do {
+			System.out.print(i);
+			i+=3;
+		} while (i<= contador);
+	}
+}
