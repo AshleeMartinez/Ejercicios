@@ -1,0 +1,23 @@
+package pareseimpares;
+
+import javax.swing.JOptionPane;
+
+public class PAREIMPAR {
+
+	public static void main(String[] args) {
+		// Hacer un programa que tome 2 numeros y diga si ambos son par o impar
+		int num1, num2;
+		
+		num1= Integer.parseInt(JOptionPane.showInputDialog("Digite el primer numero ")); 
+		num2= Integer.parseInt(JOptionPane.showInputDialog("Digite el segundo numero ")); 
+		// % modulo o residuo o resultado o total o como te ronque llamarlo xd
+		if (num1%2== 0 && num2%2==0 ) {
+			JOptionPane.showMessageDialog(null, "Los numeros son pares ");
+			
+		} else if (num1%2!= 0 && num2%2!=0) {
+			JOptionPane.showMessageDialog(null, "Los numeros son impares");
+		} else {
+			JOptionPane.showMessageDialog(null, "Uno es par y el otro impar");
+		}
+	}
+}
