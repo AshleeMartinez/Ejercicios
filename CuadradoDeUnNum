@@ -1,0 +1,22 @@
+package cuadradodeunnum;
+
+import javax.swing.JOptionPane;
+
+public class main_cuadrado {
+
+	public static void main(String[] args) {
+		// Leer un numero y mostar su cuadrado, repetir el proceso hasta que se introduzca un num negativo
+		
+		int num, cuadrado;
+		
+		num= Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero"));
+		
+		while(num>= 0) {
+			cuadrado= (int) Math.pow(num, 2);//Anteponer el int para convertirlo a un double
+			
+			JOptionPane.showMessageDialog(null, "El numero " +num+ " elevado al cuadrado es "+cuadrado);
+			
+			num= Integer.parseInt(JOptionPane.showInputDialog("Digite otro numero"));
+		}
+	}
+}
