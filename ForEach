@@ -1,0 +1,13 @@
+package foreach;
+
+public class main_foreach {
+
+	public static void main(String[] args) {
+		String[] nombres= {"Alejandro", "Maria","Juan", "Morelia", "Adrian", "Melissa", "Bryan","Ericka","Dalton"};
+		
+		for(String i: nombres) { //FOR MEJORADO WATAFOOOK te ahorrai muchas lineas de codigo QUEEEE
+			System.out.println(i);
+			
+		}
+	}
+}
