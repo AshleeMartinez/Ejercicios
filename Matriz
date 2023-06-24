@@ -1,0 +1,31 @@
+package matriz;
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+public class main_matriz {
+
+	public static void main(String[] args) {
+		Scanner entrada= new Scanner(System.in);
+		int matriz [][], nFilas, nColum;
+		
+		nFilas= Integer.parseInt(JOptionPane.showInputDialog("Digite el numero de filas "));
+		nColum= Integer.parseInt(JOptionPane.showInputDialog("Digite el numero de columnas "));
+		
+		matriz= new int[nFilas][nColum];
+		
+		System.out.println("Digite la matriz ");
+		for (int i=0; i<nFilas; i++) {
+			for (int j=0; j<nColum; j++) {
+				System.out.print("\n Matriz [" + i + "] [" + j + "]:  ");
+				matriz[i][j]= entrada.nextInt();
+			}
+		}
+		
+		// Impresion de una matriz
+		for(int i=0; i<nFilas; i++) { //num de filas
+			for(int j=0; j<nColum; j++) { //num de column
+				System.out.println(matriz[i][j]);
+			}
+		}
+		System.out.println("");
+	}
+}
