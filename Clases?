@@ -1,0 +1,48 @@
+package clases__;
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+public class main_clases {
+
+	public static void main(String[] args) {
+		Scanner teclado= new Scanner(System.in);
+		int x,y;
+		//  Uso de JoptionPane kajfafakfjf
+		 
+		JOptionPane.showInputDialog(null, "Holi");
+		
+		String num1= JOptionPane.showInputDialog(args, "Ingrese el primer numero ");
+		String num2= JOptionPane.showInputDialog(args, "Ingrese el segundo numero ");
+		
+		// Otra forma de convertir string a num 
+		x=Integer.parseInt(num1);
+		y=Integer.parseInt(num2);	
+		
+		clases_ op= new clases_(x,y);
+		JOptionPane.showMessageDialog(null, "El resultado es " +op.Mult(x, y));
+			
+		
+		
+	    // Convertir un valor de string a int 	int suma= new Integer(num1) + new Integer (num2);  
+		
+		
+		// JOptionPane.showInternalMessageDialog(null, "La suma es "+ suma);
+		
+		/*System.out.println("Ingrese el primer numero ");
+		x= teclado.nextInt();
+		
+		System.out.println("Ingrese el segundo numero ");
+		y= teclado.nextInt(); */
+		
+		
+		/* clases_ po= new clases_(x,y);
+				po.saludar();
+				
+		System.out.println("El resultado " + po.Mult(x, y)); */
+		
+		teclado.nextLine(); //Para limpiar consola 
+		po.saludar();
+		
+		
+	}
+}
