@@ -1,0 +1,34 @@
+package libreriaMath;
+import java.util.Scanner;
+public class main_Math {
+public static void main (String [] args ) {
+	Scanner pantalla= new Scanner(System.in); 
+	
+	/* double raiz= Math.sqrt(36.36);   Pa sacar la raiz de un numero
+	System.out.println(raiz); */
+	
+	
+	
+	/* double base=5;      Pa eleval un numero 
+	double exponente=2;
+	double resultado= Math.pow(base, exponente);
+	System.out.println(resultado); */
+
+	
+	
+	
+	
+	/* float numero= 7.89f;   Pa redondear un numero
+	int resultado= Math.round(numero);
+	System.out.println(resultado); */
+	
+	
+	
+	
+	
+	/* double numero=Math.random();  Pa un numero random
+	System.out.println(numero); */
+	// Buscar metodos de la clase Math :)
+	
+	}
+}
