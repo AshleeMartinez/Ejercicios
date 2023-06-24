@@ -1,0 +1,31 @@
+package ejemplobusquedasecuencial;
+import java.util.Scanner;
+public class mainbusquedasecuencial {
+
+	public static void main(String []args) {
+
+		Scanner teclado= new Scanner(System.in);
+		String frutas[]= {"Piña", "Manzana", "Banano", "Pera", "Mango"};
+		String nombre;
+		boolean k= false;
+		int i=0;
+		
+		System.out.println("Ingrese el nombre de la frutas deseada ");
+		nombre= teclado.next();
+		while (i<frutas.length && k== false) {
+			if (frutas [i].equals(nombre)) {
+				k= true;
+			}
+			i++;
+			
+		}
+		
+		if (k== false) {
+			System.out.println("El nombre de la fruta no se encuentra");
+		} else {
+			System.out.println("La posicion de la fruta en el arreglo es: "+ i);
+		}
+		
+		teclado.close();
+	}
+}
