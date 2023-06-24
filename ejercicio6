@@ -1,0 +1,25 @@
+package ejercicio6;
+import java.util.Scanner;
+public class mainejercicio6 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		// Convertir N kilogramos a Libras
+		
+		Scanner teclado=new Scanner(System.in);
+		
+		
+		double Resultado;
+		double libras= 2.20;
+		double kil;
+		
+		
+		System.out.println("Ingrese Kilogramos");
+		kil= teclado.nextInt(); 
+		
+		Resultado= kil*libras;
+	System.out.println("El resultado de la conversion es "+ Resultado);
+		
+	}
+}
