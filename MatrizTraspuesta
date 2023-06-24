@@ -1,0 +1,45 @@
+package Matriz;
+
+import java.util.Scanner;
+
+public class main___Matriz {
+
+	public static void main(String[] args) {
+		Scanner tc= new Scanner(System.in);
+		int matriz[][]= new int [3][3];
+		//Pidiendo la matriz
+		System.out.println("Digite la matriz ");
+		for(int i=0; i<3; i++) {
+			for(int j=0; j<3; j++) {
+				System.out.println("Matriz [" +i+ "]["+j+"]: ");
+				matriz[i][j]= tc.nextInt();
+			}
+		}
+		
+		//Matriz original sin edicion de parte del usuario
+		System.out.println("\n Matriz Original: ");
+		for(int i=0; i<3; i++) {
+			for(int j=0; j<3; j++) {
+				System.out.println(matriz[i][j]+ "  ");
+			}
+			System.out.print("");
+		}
+		// Transponiendo la matriz
+		int aux;
+		for(int i=0; i<3; i++) {
+			for(int j=0; j<i; j++) {
+				aux= matriz[i][j];
+				matriz[i][j]= matriz[j][i];
+				matriz[j][i]= aux;
+			}
+		}
+		//Mostrando la matriz
+		System.out.println(" La matriz transpuesta es: ");
+		for(int i=0; i<3; i++) {
+			for(int j=0; j<3; j++) {
+				System.out.print(matriz[i][j] + "  ");
+			}
+			
+		}
+	}
+}
