@@ -1,0 +1,24 @@
+package ejercicio7;
+import java.util.Scanner;
+public class mainejercicio7 {
+
+	public static void main(String[] args) {
+     Scanner teclado=new Scanner(System.in);
+	// 	Convertir X grados Fahrenheit a grados Celsius. Celsius= 5/9 (Fahrenheit -32)
+     System.out.println("Ingrese cantidad a convertir de Fahrenheit a Celsius ");
+     
+     int resultado = 0;
+     double F=-32, C=5/9;
+     double valor, resultfinal;
+     
+     if(resultado== 1){
+    	 
+    	 System.out.println("Has entrado a convertir Fahrenheit a Celsius ");
+    	 System.out.println("Ingrese Fahrenheit a convertir ");
+    	 valor= teclado.nextDouble();
+    	 resultfinal= (valor-F)*C;
+    	 System.out.println("Celsius son ");
+    	
+     }	
+	}
+}
