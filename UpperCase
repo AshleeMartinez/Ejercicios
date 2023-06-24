@@ -1,0 +1,19 @@
+package practica_enYou2;
+
+import javax.swing.JOptionPane;
+
+public class main_UpperCase {
+
+	public static void main(String[] args) {
+		//Programa que determina si la letra ingresada es Minuscula o Mayuscula
+		 char letra;
+		 
+		 letra= JOptionPane.showInputDialog ("Digite una letra ").charAt(0);
+		
+		if (Character.isUpperCase(letra)){
+			JOptionPane.showMessageDialog(null, "Es una letra Mayuscula");
+		} else {
+			JOptionPane.showMessageDialog(null, "Es una letra Minuscula");
+		}
+	}
+}
