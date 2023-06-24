@@ -1,0 +1,52 @@
+package prom_arrays;
+import java.util.Scanner;
+public class main_arrays_prom {
+
+	public static void main(String[] args) {
+		/*  Leer 5 nums por teclado, almacenarlos en un arreglo y realizar el promedio de los nums positivos, 
+		 el prom de los negativos y contar el numero de ceros. */
+		
+		Scanner tc= new Scanner(System.in);
+		float [] numeros= new float [5];
+		float suma_positivos=0, suma_negativos=0, promedio_positivos, promedio_negativos;
+		int conteo_positivos=0, conteo_negativos=0, conteo_ceros=0;
+		
+		System.out.println(" Guardando los numeros en el arreglo" );
+		for (int i=0; i<5; i++) {
+			
+			System.out.println((i+1)+ "Digite un numero " );
+			numeros[i]= tc.nextFloat();
+			if (numeros [i]== 0) {
+				conteo_ceros++;
+				
+			} else if (numeros [i] >0) {
+				suma_positivos += numeros[i];
+				conteo_positivos++;
+				
+			} else {
+				suma_negativos += numeros[i];
+				conteo_negativos++;	
+			}
+		}
+		
+		//Promedio de los +
+		
+		if(conteo_positivos ==0) {
+			System.out.println("No se puede sacar el promedio de los numeros positivos ");
+		} else {
+			promedio_positivos= suma_positivos/ conteo_positivos;
+			System.out.println("El promedio de los numeros positivos es " + promedio_positivos);
+		}
+		
+		
+		// Prom de los -
+		
+		if (conteo_negativos == 0) {
+			System.out.println("No se puede sacar el promedio de los numeros negativos ");
+		} else {
+			promedio_negativos= suma_negativos/ conteo_negativos;
+			System.out.println("El promedio de los numeros negativos es " + promedio_negativos);
+		}
+		System.out.println("La cantidad de ceros es " +conteo_ceros);
+	}
+}
