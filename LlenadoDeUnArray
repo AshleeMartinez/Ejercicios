@@ -1,0 +1,22 @@
+package llenadodeunarray;
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+public class array {
+	public static void main(String[] args) {
+		Scanner pantalla= new Scanner(System.in);
+		//Lenado de un array
+		int Nelementos;
+		Nelementos= Integer.parseInt(JOptionPane.showInputDialog("Digite la cantidad de elementos"));
+		char[] letras= new char[Nelementos];
+		System.out.println("Digite los elementos del arreglo ");
+		for (int i=0; i<Nelementos; i++) {
+			System.out.println((i+1)+ "Digite un caracter ");
+			letras[i] = pantalla.next().charAt(0);
+		}
+		System.out.println("\n Los caracteres del arreglos son ");
+		for (int i=0; i<Nelementos; i++) {
+			System.out.println(letras[i]);
+		}
+	}
+}
