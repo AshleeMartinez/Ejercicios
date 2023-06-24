@@ -1,0 +1,28 @@
+package ejemplobusqueda;
+
+
+public class mainbusqueda1 {
+
+	public static void main(String[] args) {
+		
+  int numeros[]={1,2,3,4,5,6,7,8,9,10};
+	int posicion= busquedalineal(numeros, 5);
+	if (posicion > -1) {
+		System.out.println("Encontrado en la posicion " + posicion);
+	} else {
+		System.out.println("No se encuentra en el sistema ");
+	}
+	}
+
+	//Metodo declarado para la busqueda de datos 
+      public static int busquedalineal (int []array, int valor) {
+    	  int i=0;
+    	  while (i <array.length) {
+    		  if (array[i] == valor) {
+    			  return i;
+    		  }
+    		  i++;
+    	  }
+    	  return -1;
+      }
+	}
