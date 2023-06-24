@@ -1,0 +1,29 @@
+package promediodeNnum;
+
+import javax.swing.JOptionPane;
+
+public class nnum_prom {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// Pedir números hasta que se introduzca uno negativo, y calcular la media
+		
+		int  numero, elementos=0, suma=0;
+		float promedio;
+		
+		numero= Integer.parseInt(JOptionPane.showInputDialog("Digite un num "));
+		
+		while(numero>= 0) {
+			suma += numero; //Suma iterativa
+			elementos++; //Aumenta uno a elementos
+			
+			numero= Integer.parseInt(JOptionPane.showInputDialog("Digite otro numero"));
+			
+		} if(elementos ==0) {
+			System.out.println("Error! La division entre 0 no existe ");
+		} else {
+			promedio=(float) suma/elementos;
+			System.out.println("El promedio es " + promedio);
+		}
+	}
+}
