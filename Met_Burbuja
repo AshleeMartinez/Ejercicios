@@ -1,0 +1,42 @@
+package met_burbuja;
+
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+public class burbuja__ {
+	public static void main(String[] args) {
+		Scanner teclado= new Scanner(System.in);
+		
+		int arreglo[], Nelementos, aux;
+		Nelementos= Integer.parseInt(JOptionPane.showInputDialog("Digite los elementos"));
+		
+		arreglo= new int [Nelementos]; //Le asignamos el num de elementos al arreglo
+		
+		for (int i=0; i<Nelementos; i++) {
+			System.out.println((i+1) + "Digite un numero");
+			arreglo[i]= teclado.nextInt();
+		}
+		
+		//Metodo Burbuja usa 2 for
+		for(int i=0; i<(Nelementos-1); i++) { //Para saber cuantas vueltas da el -1 es para que el programa no trabaje  mas
+			for (int j=0; j<(Nelementos-1); j++) { 
+				if(arreglo[j]> arreglo[j+1]) {
+					aux= arreglo[j];
+					arreglo[j]= arreglo[j+1];
+					arreglo[j+1]= aux;
+				}
+			}
+		}
+		
+		//Mostrar el arreglo ordenado en forma creciente
+		System.out.println("Arreglo Ordenado en forma creciente: ");
+		for(int i=0; i<Nelementos; i++) {
+			System.out.println(arreglo[i] + " - ");
+		}
+		System.out.println("Arreglo Ordenado en forma decreciente: ");
+		for(int i=(Nelementos-1); i>=0; i-- ) {
+			System.out.println(arreglo[i] + " - ");
+		}
+	}
+}
