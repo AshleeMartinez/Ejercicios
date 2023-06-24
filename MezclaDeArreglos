@@ -1,0 +1,48 @@
+package mixarrays;
+
+import java.util.Scanner;
+
+public class mezclaDeArrays {
+
+	public static void main(String[] args) {
+		/* Leer por teclado dos tablas de 10 nums enteros y mezclararlas en una tercera 
+		de forma: 1 de A, 1 de B, el 2 de A, 2 de B, etc */
+		
+		Scanner tc= new Scanner(System.in);
+		int a[], b[], c[];
+		
+		a= new int [10];
+		b= new int[10];
+		c= new int [20];
+		
+		//Pedir array A
+		System.out.println("Digite el primer arreglo ");
+		for(int i=0; i<10; i++) {
+			System.out.print((i+1)+ "Digite un numero ");
+			a[i]= tc.nextInt(); 
+		}
+		
+		//Pedimos array B 
+		System.out.println("Digite el segundo arreglo ");
+		for(int i=0; i<10; i++) {
+			System.out.print((i+1)+ "Digite un numero ");
+			b[i]= tc.nextInt(); 
+		}
+		
+		//Mezclar array A y B
+		//Vamos a utilizar el iterador i para a y b y el iterador j para c
+		int j=0;
+		
+		for(int i=0; i<10; i++) {
+			c[j]= a[i]; // 1*A, 2*A...
+			j++;
+			c[j]= b[i];// 1*B, 2*B ...
+			j++;
+		}
+		System.out.println("El tercer arreglo es ");
+		for(int i=0; i<20; i++) {
+			System.out.println(c[i]+ " ");
+		}
+		System.out.println();
+	}
+}
