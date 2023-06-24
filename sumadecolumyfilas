@@ -1,0 +1,58 @@
+package sumadecolumyfilas;
+
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+public class SUMADEFILASYCOLUMNAS__ {
+
+	public static void main(String[] args) {
+		//Crear y cargar una matriz de n x m; mostrar la suma de cada fila y columna
+		Scanner entrada= new Scanner(System.in);
+		int matriz[][], Nfilas, Ncol, suma_filas, suma_colum;
+		
+		Nfilas= Integer.parseInt(JOptionPane.showInputDialog("Digite el numero de filas "));
+		Ncol= Integer.parseInt(JOptionPane.showInputDialog("Digite el numero de columnas "));
+		
+		matriz= new int [Nfilas][Ncol];
+		
+		// Digitacion de la matriz
+		System.out.println("Digite la matriz");
+		for(int i=0; i<Nfilas; i++) {
+			for(int j=0; j<Ncol; j++) {
+				System.out.print(" Matriz ["+i+ "][" +j+"]:"); 
+				matriz[i][j]= entrada.nextInt();
+			}
+		}
+		System.out.println("\n La matriz es ");
+		for(int i=0; i<Nfilas; i++) {
+			for(int j=0; j<Ncol; j++) {
+				System.out.println(matriz[i][j]+ " ");
+			}
+		}
+		
+		//Sumamos filas
+		for(int i=0; i<Nfilas; i++) {
+			suma_filas=0;
+			for(int j=0; j<Ncol; j++) {
+				suma_filas += matriz[i][j];
+			}
+			System.out.print("\n La suma de la fila ["+i+ "] es "+suma_filas );
+		}
+
+		System.out.println("  ");	
+		
+		//Suma colum
+		
+		for(int j=0; j<Ncol; j++) {
+			suma_colum=0;
+			for(int i=0; j<Nfilas; i++) {
+				suma_colum += matriz[i][j];
+				
+			}
+			System.out.print("\n La suma de las columna [" +j+ "] es: "+suma_colum);
+		}
+		System.out.println("   ");
+		
+	}
+}
