@@ -1,0 +1,19 @@
+package contador;
+
+import javax.swing.JOptionPane;
+
+public class main_clase {
+
+	public static void main(String[] args) {
+		/*Pedir numeros hasta que se teclee uno negativo, y mostrar cuantos numeros se han introducido.*/
+		        
+		int numero, cont = 0;
+		numero = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero: "));
+		while(numero >= 0){        
+			JOptionPane.showMessageDialog(null,"Ha ingresado el numero: "+numero);
+			cont++;   
+			numero = Integer.parseInt(JOptionPane.showInputDialog("Ingrese otro numero: "));
+		}       
+		JOptionPane.showMessageDialog(null,"Numero no válido. Ingresó un total de "+cont+" numeros.");
+	}
+}
