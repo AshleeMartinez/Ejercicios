@@ -1,0 +1,26 @@
+package curso_you;
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+public class main_curso_you {
+
+	public static void main(String[] args) {
+		// Programa de entrada y salida de Datos con JOptionPane 
+		Scanner pantalla= new Scanner(System.in);
+		String cadena;
+		int entero; 
+		double decimal;
+		char letra;
+		
+		cadena= JOptionPane.showInputDialog("Digite una cadena: ");
+		entero = Integer.parseInt(JOptionPane.showInputDialog("Digite un número: "));
+		letra= JOptionPane.showInputDialog("Digite un caracter: ").charAt(0);
+		decimal= Double.parseDouble(JOptionPane.showInputDialog("Digite un decimal: "));
+		
+		JOptionPane.showMessageDialog(null, "La cadena es: "+ cadena);
+		JOptionPane.showMessageDialog(null, "El numero entero es: "+ entero);
+		JOptionPane.showMessageDialog(null, "El caracter es: "+ letra);
+		JOptionPane.showMessageDialog(null, "El decimal es: "+ decimal);
+	}
+}
