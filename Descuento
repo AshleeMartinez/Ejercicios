@@ -1,0 +1,24 @@
+package EjercicioDescuentoenMega;
+
+import javax.swing.JOptionPane;
+
+public class descuentoaplic_ {
+
+	public static void main(String[] args) {
+		/*En MegaPlaza se hace un descuento del 20% de descuento a los clientes cuya compra supere los $300. 
+		¿Cual sera la cantidad que pagara una persona por su compra?*/
+			
+		 float precio;
+		double total; 
+		double  precioDescuento= 0.2;
+	        
+	        precio = Float.parseFloat(JOptionPane.showInputDialog("Digite el precio de la compra"));
+	        
+	        if (precio >= 300){
+	            total = precio - precioDescuento;
+	            JOptionPane.showMessageDialog(null, "El monto ingresado es mayor que $300 entonces se aplica el descuento correspondiente y el resultado final es:  " + total);
+	        }else {
+	            JOptionPane.showMessageDialog(null, "El precio final es de " + precio);
+	        }
+	    }
+	}
