@@ -1,0 +1,81 @@
+package main_ejercicios;
+
+import java.math.BigInteger;
+
+public class principal_operaciones {
+
+	public static String main(String[] args) {
+		int x,y;
+		int Mult;
+		double factorial,division, raiz, raizC, pot;
+		
+		String nombre = null;
+		String saludo="Bienvenido al sistema "+nombre;
+		return saludo;
+	}
+
+	private int x;
+	private int y;
+	
+	// Metodo set y get 
+	public int getX() {
+		int x = 0;
+		return x;
+	}
+	 
+	public int setX(int x) {
+		this.x=0;
+		return x;
+	}
+
+	public int getY() {
+		int y=0;
+		return y;
+	}
+	
+	public int setY(int y) {
+		this.y=0;
+		return y;
+	}
+	
+	public static int Mult(int x, int y) {
+		int mult;
+		mult= x*y;
+		return mult;
+		}	
+	public static double Raiz1(int x){
+		double raiz=Math.sqrt(x);
+		return raiz;
+	}
+	
+	public static double Raiz2(int y){
+		double raiz=Math.sqrt(y);
+		return raiz;
+	}
+	
+	public static double raizC1(int x) {
+		double raizC= Math.cbrt(x);
+		return raizC1(x);
+	}
+	public static double raizC(int y) {
+		double raizC= Math.cbrt(y);
+		return raizC(y);
+	
+	}
+
+	public static double Pot1(int x) {
+		double potencia= Math.pow(x, 2);
+		return Pot1(x);
+	}
+	public static double Pot(int y) {
+		double potencia= Math.pow(y, 2);
+		return Pot1(y);
+	}
+	
+	public static double factorial(int x) {
+		return BigInteger.factorial(x);
+		
+	
+}
+	
+}
