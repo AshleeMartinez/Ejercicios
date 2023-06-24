@@ -1,0 +1,16 @@
+package Ciclo_while;
+import java.util.Scanner;
+public class Ciclowhile {
+
+	public static void main(String[] args) {
+		Scanner pantalla= new Scanner(System.in);
+		int i=1, contador;
+		System.out.print("Digite cuantos numeros quiere en pantalla: ");
+		contador= pantalla.nextInt();
+		
+		while(i<= contador) {
+			System.out.println(i);
+			i+=2;
+		}	
+	}
+}
